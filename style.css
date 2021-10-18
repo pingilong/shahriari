@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'cinema';
+    src: url('fonts/Cinema.ttf') format('ttf');
+    src: url('fonts/Cinema.woff') format('woff');
+}
+@font-face {
+    font-family: 'Vazir';
+    src: url('fonts/Vazir-FD.woff') format('woff');
+}
+
+::selection{
+    background-color: #023047;
+    color: #8ECAE6;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    direction: rtl;
+    background: linear-gradient(to right, #023047, #003d5c);
+    /* background-color: #023047; */
+}
+
+div.out-container{
+    background-image: url('img/footer-pattern.png');
+    height: 100vh;
+}
+
+div.title {
+    text-align: center;
+}
+
+h1 {
+    color: #FB8500;
+    font-family: cinema;
+    font-size: 5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+div.time {
+    font-size: 2rem;
+    font-family: vazir;
+    font-weight: bold;
+    color: #FFB703;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+div.container {
+    margin: 0 auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(33, 158, 188, .2);
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+}
+
+table {
+    font-family: vazir;
+    font-size: 1.3rem;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table thead th {
+    color: #FB8500;
+    border-bottom: 1.5px solid #FB8500;
+}
+table thead th:first-child {
+    border-left: 1.5px solid #FB8500;
+}
+
+table tbody td {
+    color: #FFB703;
+}
+
+table td:first-child {
+    color: #FB8500;
+    font-weight: bold;
+    border-left: 1.5px solid #FB8500;
+}
+
+td, th {
+    padding: 5px 15px;
+}
+
+.active {
+    background-color: rgba(33, 158, 188, .5);
+}
+.active td:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.active td:last-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+p {
+    color: #8ECAE6;
+    font-family: vazir;
+    font-weight: 100;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: .5;
+    transition: all .5s;
+    cursor: default;
+}
+p:hover {
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    div.container {
+        padding: 1rem 1rem;
+    }
+    table{
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    div.time {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 500px) {
+    table{
+        font-size: .8rem;
+    }
+    h1 {
+        font-size: 3rem;
+        padding: 2rem 0;
+    }
+    div.time {
+        padding-top: 2rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 425px) {
+    div.container {
+        padding: 1rem .5rem;
+    }
+    td, th {
+        padding: 4px 10px;
+    }
+}
